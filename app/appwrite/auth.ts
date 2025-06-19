@@ -1,6 +1,6 @@
-import { redirect } from 'react-router'
 import { ID, OAuthProvider, Query } from 'appwrite'
 import { account, database, appwriteConfig } from '~/appwrite/client'
+import { redirect } from 'react-router'
 
 export const getExistingUser = async (id: string) => {
   try {
@@ -21,6 +21,7 @@ export const getExistingUser = async (id: string) => {
 export const storeUserData = async () => {
   try {
     const user = await account.get()
+
     if (!user) throw new Error('User not found')
 
     const { providerAccessToken } = (await account.getSession('current')) || {}
@@ -53,7 +54,6 @@ const getGooglePicture = async (accessToken: string) => {
       'https://people.googleapis.com/v1/people/me?personFields=photos',
       { headers: { Authorization: `Bearer ${accessToken}` } }
     )
-
     if (!response.ok) throw new Error('Failed to fetch Google profile picture')
 
     const { photos } = await response.json()
@@ -89,6 +89,7 @@ export const logoutUser = async () => {
 export const getUser = async () => {
   try {
     const user = await account.get()
+
     if (!user) return redirect('/sign-in')
 
     const { documents } = await database.listDocuments(
