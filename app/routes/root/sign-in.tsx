@@ -9,7 +9,7 @@ export async function clientLoader() {
 
     if (user.$id) return redirect('/')
   } catch (e) {
-    console.log('Error fetching user', e)
+    console.error('Error fetching user', e)
   }
 }
 
