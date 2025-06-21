@@ -176,7 +176,7 @@ const Dashboard = ({ loaderData }: Route.ComponentProps) => {
               yName='count'
               type='SplineArea'
               name='Wave'
-              fill='rgba(71, 132, 328, 0.3)'
+              fill='rgba(71, 132, 228, 0.3)'
               border={{ width: 2, color: '#4784EE' }}
             />
           </SeriesCollectionDirective>
