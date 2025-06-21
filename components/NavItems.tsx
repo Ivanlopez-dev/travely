@@ -59,12 +59,7 @@ const NavItems = ({ handleClick }: { handleClick?: () => void }) => {
             <p>{user?.email}</p>
           </article>
 
-          <button
-            onClick={() => {
-              handleLogout()
-            }}
-            className='cursor-pointer'
-          >
+          <button onClick={handleLogout} className='cursor-pointer'>
             <img
               src='/assets/icons/logout.svg'
               alt='Logout icon'
