@@ -74,7 +74,7 @@ const TripDetail = ({ loaderData }: Route.ComponentProps) => {
           <h1 className='p-40-semibold text-dark-100'>{name}</h1>
           <div className='flex items-center gap-5'>
             <InfoPill
-              text={`${duration} days plan`}
+              text={`${duration} day plan`}
               image='/assets/icons/calendar.svg'
             />
 
@@ -148,7 +148,7 @@ const TripDetail = ({ loaderData }: Route.ComponentProps) => {
         <section className='title'>
           <article>
             <h3>
-              {duration}-Days {country} {travelStyle} Trip
+              {duration}-Day {country} {travelStyle} Trip
             </h3>
             <p>
               {budget}, {groupType} and {interests}
