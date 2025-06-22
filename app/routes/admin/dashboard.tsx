@@ -1,17 +1,21 @@
 import {
   Category,
   ChartComponent,
-  ColumnDirective,
-  ColumnsDirective,
   ColumnSeries,
   DataLabel,
-  Inject,
   SeriesCollectionDirective,
   SeriesDirective,
   SplineAreaSeries,
-  Tooltip
+  Tooltip,
+  Legend
 } from '@syncfusion/ej2-react-charts'
-import { GridComponent } from '@syncfusion/ej2-react-grids'
+
+import {
+  ColumnDirective,
+  ColumnsDirective,
+  GridComponent,
+  Inject
+} from '@syncfusion/ej2-react-grids'
 
 import {
   getTripsByTravelStyle,
@@ -148,6 +152,14 @@ const Dashboard = ({ loaderData }: Route.ComponentProps) => {
           primaryYAxis={useryAxis}
           title='User Growth'
           tooltip={{ enable: true }}
+          legendSettings={{
+            visible: true,
+            position: 'Top',
+            alignment: 'Far',
+            shapeHeight: 16,
+            shapeWidth: 16,
+            padding: 16
+          }}
         >
           <Inject
             services={[
@@ -155,7 +167,8 @@ const Dashboard = ({ loaderData }: Route.ComponentProps) => {
               SplineAreaSeries,
               Category,
               DataLabel,
-              Tooltip
+              Tooltip,
+              Legend
             ]}
           />
 
@@ -165,7 +178,7 @@ const Dashboard = ({ loaderData }: Route.ComponentProps) => {
               xName='day'
               yName='count'
               type='Column'
-              name='Column'
+              name='Users'
               columnWidth={0.3}
               cornerRadius={{ topLeft: 10, topRight: 10 }}
             />
@@ -175,8 +188,7 @@ const Dashboard = ({ loaderData }: Route.ComponentProps) => {
               xName='day'
               yName='count'
               type='SplineArea'
-              name='Wave'
-              fill='rgba(71, 132, 228, 0.3)'
+              fill='rgba(71, 132, 238, 0.3)'
               border={{ width: 2, color: '#4784EE' }}
             />
           </SeriesCollectionDirective>
@@ -188,6 +200,14 @@ const Dashboard = ({ loaderData }: Route.ComponentProps) => {
           primaryYAxis={tripyAxis}
           title='Trip Trends'
           tooltip={{ enable: true }}
+          legendSettings={{
+            visible: true,
+            position: 'Top',
+            alignment: 'Far',
+            shapeHeight: 16,
+            shapeWidth: 16,
+            padding: 16
+          }}
         >
           <Inject
             services={[
@@ -195,7 +215,8 @@ const Dashboard = ({ loaderData }: Route.ComponentProps) => {
               SplineAreaSeries,
               Category,
               DataLabel,
-              Tooltip
+              Tooltip,
+              Legend
             ]}
           />
 
@@ -205,7 +226,7 @@ const Dashboard = ({ loaderData }: Route.ComponentProps) => {
               xName='travelStyle'
               yName='count'
               type='Column'
-              name='day'
+              name='Travels'
               columnWidth={0.3}
               cornerRadius={{ topLeft: 10, topRight: 10 }}
             />
