@@ -1,87 +1,139 @@
-# Welcome to React Router!
+<div align="center">
+  <br />
+  <h1>✈️ Travely</h1>
+    <!-- <a href="https://" target="_blank">
+      <img src="public/readme/hero.png" alt="Project Banner">
+    </a> -->
+  <br />
 
-A modern, production-ready template for building full-stack React applications using React Router.
+  <div>
+     <img src="https://img.shields.io/badge/-React-blue?style=for-the-badge&logoColor=white&logo=react&color=09f" alt="react" />
+    <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="typescript" />
+    <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
+    <img src="https://img.shields.io/badge/-Syncfusion-black?style=for-the-badge&logoColor=white&logo=syncfusion&color=181758" alt="syncfusion" />
+  </div>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+<h3 align="center">Travel Agency Platform 🌍</h3>
 
-## Features
+   <div align="center">
+     A modern travel agency platform with an admin dashboard and public site.
+    </div>
+</div>
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## 📝 <a name="table">Table of Contents</a>
 
-## Getting Started
+1. 🤖 [**Introduction**](#introduction)
+2. ⚙️ [**Tech Stack**](#tech-stack)
+3. ⚡ [**Features**](#features)
+4. 🚀 [**Quick Start**](#quick-start)
+
+## <a name="introduction">🤖 Introduction</a>
+
+Travely is an Admin Dashboard that allows users Generate AI-powered trip itineraries based on country, travel style, interests, group type, and budget — and book trips with ease.
+
+
+## <a name="tech-stack">⚙️ Tech Stack</a>
+
+- [**React 19**](https://react.dev)
+- [**React Router v7**](https://reactrouter.com/home)
+- [**TypeScript**](https://www.typescriptlang.org/)
+- [**TailwindCSS v4**](https://tailwindcss.com/)
+- [**Syncfusion**](https://www.syncfusion.com/)
+- [**Vite**](https://vite.dev/)
+- [**Appwrite**](https://appwrite.io)
+
+## <a name="features">⚡ Features</a>
+
+- **Admin dashboard** with **trip** and **user management**
+
+- **AI-powered** trip itinerary generator
+
+- **Detailed trip** overview
+
+- **User growth metrics** chart and trip statistics
+
+- **Secure user authentication** and data management
+
+- **Responsive UI** with a modern design
+
+- **Modular code architecture** with reusable components
+
+### 🔨 Incoming features ( WIP )
+
+- Trip booking functionality on the public website (Public Landing page)
+
+<br>
+
+
+## <a name="quick-start">🚀 Quick Start</a>
+
+Follow these steps to set up the project locally on your machine.
+
+### Prerequisites
+
+Make sure you have the following installed on your machine:
+
+- [**Git**](https://git-scm.com/)
+- [**Node.js**](https://nodejs.org/en)
+- [**npm**](https://www.npmjs.com/) (Node Package Manager)
+
+### Cloning the Repository
+
+```bash
+git clone https://github.com/Ivanlopez-dev/travely.git
+cd travely
+```
 
 ### Installation
 
-Install the dependencies:
+Install the project dependencies using npm:
 
 ```bash
 npm install
 ```
 
-### Development
+### Set Up Environment Variables
 
-Start the development server with HMR:
+Create a new file named `.env` in the root of your project and add the following content:
+
+```env
+# Syncfusion
+VITE_SYNCFUSION_LICENSE_KEY=
+
+# Appwrite
+VITE_APPWRITE_PROJECT_ID=
+VITE_APPWRITE_API_ENDPOINT=
+VITE_APPWRITE_API_KEY=
+VITE_APPWRITE_DATABASE_ID=
+VITE_APPWRITE_USERS_COLLECTION_ID=
+VITE_APPWRITE_ITINERARY_COLLECTION_ID=
+VITE_BASE_URL="http://localhost:5173"
+
+# Gemini
+GEMINI_API_KEY=
+
+# Unsplash
+UNSPLASH_ACCESS_KEY="
+```
+Replace the values with your actual credentials. You can obtain these credentials by each Syncfusion/Appwrite/Gemini/Unsplash dashboard page
+
+### Running the Project
 
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+Open [**http://localhost:5173/**](http://localhost:5173/) in your browser to view the project.
 
-## Building for Production
+### 📝 Notes:
 
-Create a production build:
+- ❌ The root page ( **' / '** ) is empty for the moment. 
+- 🔒 You must be logged in with Google first 
+- 👑 And have an Admin role to actually access into the Dashboard
 
-```bash
-npm run build
-```
+This can be annoying cause can not see anything at first instance, but I will be working on the public landing page.
 
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+Incoming features:
+<br>
+(🔨 Work in Progress)
+- **Trip booking functionality** on the public website (Landing page)
